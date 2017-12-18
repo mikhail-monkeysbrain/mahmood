@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru" >
+<head>
+  	<meta charset="UTF-8">
+  	<title>Mahmood</title>
+  
+  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+	<link href="http://allfont.ru/allfont.css?fonts=bebas" rel="stylesheet" type="text/css" />  
+    <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+	<div class="logo logo1"><img src="img/logo1.jpg" alt="logo"></div>
+	<div class="logo logo2"><img src="img/logo2.jpg" alt="logo"></div>
+	<a href="http://mahmud.dev-ii.ru/test/mahcoffe/" class="text text__coffee">
+		<div class="text__coffee__after"></div>
+		<h2>lorem &nbsp; ipsum</h2>
+		<p>Lorem ipsum dolor sit amet.</p>
+	</a>
+	<a href="http://mahmud.dev-ii.ru/test/tea" class="text text__tea">
+		<div class="text__tea__after"></div>
+		<h2>lorem &nbsp; ipsum</h2>
+		<p>Lorem ipsum dolor sit amet.</p>
+	</a>
+  
+  <div class="wrapper">
+	<div class="cof">
+		<a href="http://mahmud.dev-ii.ru/test/mahcoffe/">
+			<img src="img/cofee.png" alt="tea" class="img__coffee">
+		</a>
+		<video id="movie1" class="videocof" src="coffee.mp4" muted poster="img/poster1.jpg"></video>
+	</div>
+	<div class="trapezoid">
+		<a href="http://mahmud.dev-ii.ru/test/tea">
+			<img src="img/tea1.png" alt="tea" class="img__tea">
+		</a>
+		<video  id="movie2" src="tea.mp4" muted muted poster="img/poster2.jpg"></video>
+	</div>
+</div>
+  
+  
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+	$(function(){
+		$('.trapezoid').hover(function(){
+			//$('.img__coffee').toggleClass('left');
+			$('.text__tea__after').toggleClass('active');
+			//$('.text__coffee').toggleClass('left');
+		});
+		$('.cof').hover(function(){
+			//$('.img__tea').toggleClass('right');
+			$('.text__coffee__after').toggleClass('active');
+			//$('.text__tea').toggleClass('right');
+		});
+	});
+</script>
+
+<script>
+$(function(){
+
+	$('#movie1').on("mouseenter", function(){
+		document.getElementById('movie1').play();
+	});
+	$('#movie1').on("mouseout", function(){
+		document.getElementById('movie1').pause();
+	});
+	$('#movie2').on("mouseenter", function(){
+		document.getElementById('movie2').play();
+	});
+	$('#movie2').on("mouseout", function(){
+		document.getElementById('movie2').pause();
+	});
+
+});
+</script>
+
+</html>
